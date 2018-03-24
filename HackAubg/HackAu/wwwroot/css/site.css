@@ -133,7 +133,6 @@ a.powered-by-firepad {
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     background: white !important;
-    margin-top: 33px;
     font-size: 16px;
 }
 
@@ -273,9 +272,8 @@ main article h3 span {
 
 .logo {
     float: left;
-    padding: 19px;
-    width: 99px;
-    height: 114px;
+    padding-top: 5px;
+    height: 50px;
     text-decoration: none;
 }
 
