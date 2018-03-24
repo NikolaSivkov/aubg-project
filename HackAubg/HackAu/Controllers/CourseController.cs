@@ -66,9 +66,8 @@ namespace HackAu.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.GetUserAsync(User);
-                course.Teacher = user;
-                course.TeacherId = user.Id;
+                var userid = _userManager.GetUserId(HttpContext.User);
+                course.TeacherId = userid;
                 _context.Add(course);
                 
                 await _context.SaveChangesAsync();
