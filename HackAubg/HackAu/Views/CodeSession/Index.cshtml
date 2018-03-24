@@ -23,11 +23,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/addon/edit/matchbrackets.js"></script>
 
-
-   
     <!-- Firepad -->
     <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
     <script src="~/js/firepad-users.js"></script>
+
+    <!-- WebRTC-->
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://simplewebrtc.com/latest-v3.js"></script>
+
 
     <script>
         function init() {
@@ -87,12 +90,42 @@
             $(".body-content").removeClass("container").addClass("container-fluid");
             init();
         })
+
+        var webrtc;
+
+        function joinConversation() {
+
+            $("#conversation").removeClass("hidden");
+            $("#joinConversation").addClass("hidden");
+            webrtc = new SimpleWebRTC({
+                // the id/element dom element that will hold "our" video
+                localVideoEl: 'localVideo',
+                // the id/element dom element that will hold remote videos
+                remoteVideosEl: 'remotesVideos',
+                // immediately ask for camera access
+                autoRequestMedia: true
+            });
+
+            // we have to wait until it's ready
+            webrtc.on('readyToCall', function () {
+                // you can name it anything
+                webrtc.joinRoom('room1');
+            });
+        }
+
     </script>
 
 }
 
-<h2>Code Session</h2>
 <div class="row">
-    <div id="users" class="col-lg-2 col-md-3 col-sm-3"></div>
+    <div  class="col-lg-2 col-md-3 col-sm-3">
+        <div id="users"></div>
+        <hr />
+        <button id="joinConversation" onclick="joinConversation()" class="btn btn-primary">Join Conversation</button>
+        <div id="conversation" class="hidden">
+            <video id="localVideo"></video>
+            <div id="remotesVideos"></div> 
+        </div>
+    </div>
     <div id="firepad" class="col-lg-10 col-md-9 col-sm-9"></div>
 </div>
