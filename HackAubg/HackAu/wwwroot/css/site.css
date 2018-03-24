@@ -33,3 +33,11 @@
         display: none;
     }
 }
+
+#firepad{
+    height:80vh;
+}
+
+a.powered-by-firepad {
+    display: none;
+}
