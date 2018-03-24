@@ -37,13 +37,17 @@
 }
 
 header {
-    background: url(../images/header-background.jpg) no-repeat center center fixed;
+    background: url(../images/header-back.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 400px;
+    height: 600px;
     width: 100%;
+}
+
+header p {
+    font-size: 23px;
 }
 
 @media (min-width: 1200px) {
@@ -64,7 +68,7 @@ header {
     color: white;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.75);
     padding: 70px;
-    padding-top: 90px;
+    padding-top: 11%;
 }
 
 
@@ -75,7 +79,6 @@ header {
 .right-side {
     float: right;
 }
-
 
 .navbar {
     padding-left: 50px;
