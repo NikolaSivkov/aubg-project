@@ -151,7 +151,7 @@ a.powered-by-firepad {
 
 .navbar-inverse .navbar-nav > li > a {
     border-right: 1px solid rgba(0,0,0,.05);
-    *
+    
     font-size: 19px;
     /*border-left: 1px solid rgba(0,0,0,.05);*/
 }
