@@ -1,4 +1,6 @@
-﻿body {
+﻿
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     width: 100%;
@@ -137,4 +139,36 @@ a.powered-by-firepad {
     border: 1px solid rgba(0,0,0,.05);
     font-size: 15px;
     /*border-left: 1px solid rgba(0,0,0,.05);*/
+}
+
+main article {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+main article img {
+    border-radius: 50%;
+    max-width: 400px;
+    min-height: 400px;
+    margin: 23px;
+}
+
+.fa-users {
+    color: #008ddf;
+    font-size: 54px;
+    padding-top: 37px;
+}
+
+main article h1 span {
+    color: #008ddf;
+}
+
+.team {
+    display: inline-block;
+}
+
+.team article {
+
 }
