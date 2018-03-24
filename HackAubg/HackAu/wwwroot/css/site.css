@@ -1,6 +1,4 @@
-﻿
-
-body {
+﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
     width: 100%;
@@ -40,9 +38,6 @@ body {
 
 header {
     background: url(../images/header-back.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     height: 400px;
     width: 100%;
@@ -132,6 +127,7 @@ a.powered-by-firepad {
     #main-page-button a {
         color: white;
         text-decoration: none;
+        outline: none;
     }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
@@ -196,4 +192,72 @@ main article h3 span {
 
 .team-images {
     border-radius: 50%;
+    object-fit: cover;
 }
+
+#form-template {
+    background: url(../images/registration-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 220px;
+}
+
+    #form-template form {
+        color: white;
+        font-size: 21px;
+        background: gray;
+        background: url(../images/form-back.png) no-repeat center center fixed;
+        padding: 38px;
+    }
+
+    #form-template .btn-default {
+        background: transparent;
+        border: 3px solid white;
+        border-radius: 15px;
+        font-size: 21px;
+        padding-left: 21px;
+        padding-right: 21px;
+        margin-top: 20px;
+        color: white;
+    }
+
+#Email-error, #Password-error, #ConfirmPassword-error, .text-danger, .text-danger li {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#form-template .form-group {
+    margin-top: 12px;
+}
+
+    #form-template .form-group a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #form-template .form-group p:first-child {
+        margin-top: 31px;
+    }
+
+
+.checkbox {
+    display: none;
+}
+
+.checkbox + checkbox label {
+    color: #f2f2f2;
+}
+
+.checkbox + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -2px 10px 0 0;
+    vertical-align: middle;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+    cursor: pointer;
+}
+
+    .checkbox:checked + label span {
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+    }
