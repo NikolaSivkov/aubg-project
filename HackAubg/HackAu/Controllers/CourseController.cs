@@ -66,13 +66,28 @@ namespace HackAu.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.GetUserAsync(User);
-                course.Teacher = user;
-                course.TeacherId = user.Id;
-                _context.Add(course);
-                
+                //TODO: report bug to microsoft 
+                //var user = await _userManager.GetUserAsync(HttpContext.User);
+                //var mm = string.Copy(user.Id);
+                // course.TeacherId = mm;
+
+                //var user =  _userManager.GetUserAsync(HttpContext.User).Result;
+                //var mm = string.Copy(user.Id);
+                // course.TeacherId = mm;
+
+                //var userId = await Task.Run(() =>
+                //{
+                //    return _userManager.GetUserId(HttpContext.User);
+                //});
+                //course.TeacherId = userId;
+
+                var userId = _userManager.GetUserId(HttpContext.User);
+                course.TeacherId = userId;
+
+                _context.Courses.Add(course);
+
                 await _context.SaveChangesAsync();
-                 return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
             }
             return View(course);
         }
