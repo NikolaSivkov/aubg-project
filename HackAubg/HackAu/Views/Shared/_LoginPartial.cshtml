@@ -9,6 +9,12 @@
     <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>
+                <a asp-area="" asp-controller="CodeSession" asp-action="Index" title="CodeSession"></a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Course" asp-action="Index" title="Course">Courses</a>
+            </li>
+            <li>
                 <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
             </li>
             <li>

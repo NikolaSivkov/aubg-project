@@ -5,6 +5,13 @@
     <UserSecretsId>aspnet-HackAu-49E1FD25-328F-439E-8E26-1BE35714F4FD</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20180324135133_Initialize.cs" />
+    <Compile Remove="Data\Migrations\20180324135133_Initialize.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180324141911_init.cs" />
+    <Compile Remove="Data\Migrations\20180324141911_init.Designer.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />

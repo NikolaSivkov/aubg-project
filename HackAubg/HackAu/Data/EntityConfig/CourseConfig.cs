@@ -15,7 +15,8 @@ namespace HackAu.Data.EntityConfig
             builder.HasKey(x => x.Id);
             builder.HasOne(x => x.Teacher)
                 .WithMany(x => x.Courses)
-               .HasForeignKey(x => x.TeacherId);
+                .HasForeignKey(x=>x.TeacherId);
+            
            
         }
     }
