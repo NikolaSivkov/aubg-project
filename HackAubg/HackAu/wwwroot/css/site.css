@@ -91,4 +91,16 @@ footer {
     height: 35px;
     padding: 30px;
     padding-top: 14px;
+}   
+
+
+
+/* 
+Firepad code
+*/
+#firepad {
+    height:78vh;
+}
+a.powered-by-firepad {
+    display: none;
 }
