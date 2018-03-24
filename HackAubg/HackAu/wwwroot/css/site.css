@@ -103,6 +103,13 @@ a.powered-by-firepad {
     display: none;
 }
 
+#localVideo , #remoteVideos video {
+    width:100%;
+    min-width:150px;
+    max-width:250px;
+    object-fit:contain;
+}
+
 #main-page-button {
     background: #008DDF;
     padding: 6px;
