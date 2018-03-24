@@ -48,9 +48,9 @@ header {
     width: 100%;
 }
 
-header p {
-    font-size: 16px;
-}
+    header p {
+        font-size: 16px;
+    }
 
 @media (min-width: 1200px) {
     .container {
@@ -59,7 +59,7 @@ header p {
     }
 }
 
-.navbar  {
+.navbar {
     margin-bottom: 0 !important;
 }
 
@@ -80,20 +80,30 @@ header p {
     padding-right: 50px;
 }
 
-footer {   
-    background: #222222;
+footer {
+    background: white;
     color: #9d9d9d;
     height: 35px;
     padding: 30px;
     padding-top: 14px;
-}   
+    border-top: 1px solid rgba(0,0,0,.05);
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+    footer:hover {
+        color: #008DDF;
+        cursor: pointer;
+    }
 
 /* 
 Firepad code
 */
 #firepad {
-    height:78vh;
+    height: 78vh;
 }
+
 a.powered-by-firepad {
     display: none;
 }
@@ -113,10 +123,10 @@ a.powered-by-firepad {
     font-weight: bold;
 }
 
-#main-page-button a {
-    color: white;
-    text-decoration: none;
-}
+    #main-page-button a {
+        color: white;
+        text-decoration: none;
+    }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     background: white !important;
@@ -145,15 +155,14 @@ main article {
     width: 50%;
     margin: 0 auto;
     text-align: center;
-
 }
 
-main article img {
-    border-radius: 50%;
-    max-width: 400px;
-    min-height: 400px;
-    margin: 23px;
-}
+    main article img {
+        border-radius: 50%;
+        max-width: 400px;
+        min-height: 400px;
+        margin: 23px;
+    }
 
 .fa-users {
     color: #008ddf;
@@ -161,14 +170,24 @@ main article img {
     padding-top: 37px;
 }
 
-main article h1 span {
+main article h3 span {
     color: #008ddf;
 }
 
 .team {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.team article {
+    .team article {
+        width: 29%;
+        margin: 40px;
+        text-align: center;
+    }
 
+.team-images {
+    border-radius: 50%;
 }
