@@ -3,6 +3,14 @@
     ViewData["Title"] = "Index";
 }
 
+@section Styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/theme/dracula.css" />
+
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
+    <link href="~/css/firepad-users.css" rel="stylesheet" />
+}
+
 @section Scripts {
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
@@ -15,18 +23,25 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/addon/edit/matchbrackets.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/theme/dracula.css" />
 
+   
     <!-- Firepad -->
-    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
     <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+    <script src="~/js/firepad-users.js"></script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 
     <script>
         function init() {
+
+            var userId = Math.floor(Math.random() * 9999999999).toString();
+            var displayName;
+            @if (User.Identity.IsAuthenticated) {
+                @:userId = "@ViewData["userId"]";
+                @:displayName = "@User.Identity.Name.Split('@')[0].Replace(".","-")";
+            }
+
             // Initialize Firebase.
             // TODO: replace with your Firebase project configuration.
             var config = {
@@ -37,6 +52,7 @@
                 storageBucket: "",
                 messagingSenderId: "199292717885"
             };
+
             firebase.initializeApp(config);
 
             // Get Firebase Database reference.
@@ -48,18 +64,30 @@
                 lineNumbers: true,
                 styleActiveLine: true,
                 matchBrackets: true,
-                theme:"dracula"
+                theme: "dracula"
             });
 
             // Create Firepad (with rich text toolbar and shortcuts enabled).
             var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
                 richTextShortcuts: true,
                 richTextToolbar: false,
-                defaultText: "alert('Hello, world!');"
+                defaultText: "alert('Hello, world!');",
+                userId: userId
+            });
+
+
+            //// Create FirepadUserList (with our desired userId).
+            var firepadUserList = FirepadUserList.fromDiv(firepadRef.child('users'),
+                document.getElementById('users'), userId, displayName);
+            //// Initialize contents.
+            firepad.on('ready', function () {
+                if (firepad.isHistoryEmpty()) {
+                    firepad.setText('Check out the user list to the left!');
+                }
             });
         }
-
         $(document).ready(function () {
+            $(".body-content").removeClass("container").addClass("container-fluid");
             init();
         })
     </script>
@@ -67,5 +95,7 @@
 }
 
 <h2>Code Session</h2>
-
-<div id="firepad"></div>
+<div class="row">
+    <div id="users" class="col-lg-2 col-md-3 col-sm-3"></div>
+    <div id="firepad" class="col-lg-10 col-md-9 col-sm-9"></div>
+</div>
