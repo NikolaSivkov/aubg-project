@@ -1,6 +1,4 @@
-﻿
-
-body {
+﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
     width: 100%;
@@ -40,9 +38,6 @@ body {
 
 header {
     background: url(../images/header-back.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     height: 400px;
     width: 100%;
@@ -126,6 +121,7 @@ a.powered-by-firepad {
     #main-page-button a {
         color: white;
         text-decoration: none;
+        outline: none;
     }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
@@ -190,4 +186,36 @@ main article h3 span {
 
 .team-images {
     border-radius: 50%;
+    object-fit: cover;
+}
+
+#form-template {
+    background: url(../images/registration-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 220px;
+}
+
+    #form-template form {
+        color: white;
+        font-size: 25px;
+        background: gray;
+        background: url(../images/form-back.png) no-repeat center center fixed;
+        padding: 38px;
+    }
+
+    #form-template .btn-default {
+        background: transparent;
+        border: 3px solid white;
+        border-radius: 15px;
+        font-size: 25px;
+        padding-left: 21px;
+        padding-right: 21px;
+        margin-top: 20px;
+        color: white;
+    }
+
+#Email-error, #Password-error, #ConfirmPassword-error, .text-danger, .text-danger li {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
 }
