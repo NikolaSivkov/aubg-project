@@ -142,10 +142,15 @@ a.powered-by-firepad {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    border: 1px solid rgba(0,0,0,.05);
-    font-size: 15px;
+    border-right: 1px solid rgba(0,0,0,.05);*
+    font-size: 19px;
     /*border-left: 1px solid rgba(0,0,0,.05);*/
 }
+
+.nav navbar-nav {
+    margin-top: 40px;
+}
+
 
 main article {
     width: 50%;
@@ -255,3 +260,10 @@ main article h3 span {
     .checkbox:checked + label span {
         background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
     }
+
+
+.logo img{
+    padding: 19px;
+    width: 109px;
+    height: 126px;
+}
