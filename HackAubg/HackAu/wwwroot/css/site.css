@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    width: 100%;
+    margin: 0;
 }
 
 /* Wrapping element */
@@ -34,10 +36,56 @@
     }
 }
 
-#firepad{
-    height:80vh;
+header {
+    background: url(../images/header-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
 }
 
-a.powered-by-firepad {
-    display: none;
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.navbar  {
+    margin-bottom: 0 !important;
+}
+
+.left-side, .right-side {
+    width: 36%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.75);
+    padding: 70px;
+    padding-top: 90px;
+}
+
+
+.left-side {
+    float: left;
+}
+
+.right-side {
+    float: right;
+}
+
+
+.navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+footer {   
+    background: #222222;
+    color: #9d9d9d;
+    height: 35px;
+    padding: 30px;
+    padding-top: 14px;
 }
