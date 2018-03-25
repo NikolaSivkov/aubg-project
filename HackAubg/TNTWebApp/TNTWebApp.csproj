@@ -228,10 +228,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\firepad-users.css" />
-    <Content Include="Content\images\banner1.svg" />
-    <Content Include="Content\images\banner2.svg" />
-    <Content Include="Content\images\banner3.svg" />
-    <Content Include="Content\images\banner4.svg" />
     <Content Include="Content\images\form-back.png" />
     <Content Include="Content\images\header-back.png" />
     <Content Include="Content\images\logo.png" />
