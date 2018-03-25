@@ -59,7 +59,7 @@
             firebase.initializeApp(config);
 
             // Get Firebase Database reference.
-            var firepadRef = firebase.database().ref();
+            var firepadRef = firebase.database().ref().child(sessionId);
 
             // Create CodeMirror (with lineWrapping on).
             var codeMirror = CodeMirror(document.getElementById('firepad'), {
