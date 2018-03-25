@@ -1,42 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    width: 100%;
-    margin: 0;
-}
-
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
-}
-
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
-}
-
-header {
+﻿header {
     background: url(/content/images/header-back.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 400px;
@@ -79,7 +41,7 @@ body header, .container body-content {
     width: 100%;
     margin: 0;
     padding: 0;
-    margin-top: 25px !important;
+    height: auto !important;
 }
 
 .body-content {
@@ -88,7 +50,10 @@ body header, .container body-content {
     margin: 0;
     width: 100%;
     padding: 0;
+    margin-top: 25px !important;
+    text-align: center;
 }
+
 
     @media (min-width: 1200px) {
         .container {
@@ -357,18 +322,7 @@ h3 {
         color: #394B61 !important;
     }
 
-body header, .container body-content {
-    height: auto !important;
-}
 
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 !important;
-    width: 100% !important;
-    padding: 0 !important;
-    text-align: center;
-}
 
 .team {
     width: 100% !important;
