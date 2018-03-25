@@ -9,14 +9,14 @@
         </h3>
         
         <h1 class="home-sec">
-            FIND YOUR TRAINER OR <br/>
-            BE A TRAINER!
+            FIND YOUR MENTOR OR <br/>
+            BE A MENTOR!
         </h1>
         
         <span id="border-white"> </span>
 
         <button id="main-page-button">
-            <a a asp-area="" asp-controller="Account" asp-action="Register">GET STARTED</a>
+            @Html.ActionLink("GET STARTED","Register","Account")
         </button>
     </div>
     
@@ -25,19 +25,19 @@
 <main>
     <article>
         <i class="fas fa-users"></i>
-        <h1>HERE IS IT <span>TNT</span> TEAM</h1>
+        <h1>HERE IS THE <span>TNT</span> TEAM</h1>
     </article>
     <section class="team">
         <div class="overlay">
             <article>
                 <h3>
-                    Toni is young and enthusiastic student who wants to learn new things and to share her
+                    Toni is young and enthusiastic student who wants to learn new things and share her
                     knowledge with others.
                 </h3>
                 <img src="/content/images/tony.gif" class="team-images" />
             </article>
             <article>
-                <h3>Niki is talented .NET developer who wants to share knowledge about technologies which he knows.</h3>
+                <h3>Niki is talented .NET developer who wants to share his knowledge about technology.</h3>
                 <img src="/content/images/niki.jpg" class="team-images" />
             </article>
             <article>
@@ -45,6 +45,5 @@
                 <img src="/content/images/tishko.jpg" class="team-images" />
             </article>
         </div>
-        
     </section>
 </main>
