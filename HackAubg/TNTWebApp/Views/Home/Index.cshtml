@@ -1,25 +1,34 @@
 ﻿@{
-//ViewData["Title"] = "Hack AUBG";
+    //ViewData["Title"] = "Hack AUBG";
 }
 
 <header>
     <div class="overlay">
-        
-        <h3 class="home-sec">WANT TO LEARN / TEACH ?
+
+        <h3 class="home-sec">
+            WANT TO LEARN / TEACH ?
         </h3>
-        
+
         <h1 class="home-sec">
-            FIND YOUR MENTOR OR <br/>
+            FIND YOUR MENTOR OR <br />
             BE A MENTOR!
         </h1>
-        
-        <span id="border-white"> </span>
 
-        <button id="main-page-button">
-            @Html.ActionLink("GET STARTED","Register","Account")
-        </button>
+        <span id="border-white"> </span>
+        @if (User.Identity.IsAuthenticated)
+         {
+               <button id="main-page-button">
+                     @Html.ActionLink("Courses", "Index","Courses")
+                </button>
+         }
+        else
+        {
+           <button id="main-page-button">
+              @Html.ActionLink("GET STARTED", "Register", "Account")
+          </button>
+        }
     </div>
-    
+
 </header>
 
 <main>
