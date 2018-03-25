@@ -54,7 +54,7 @@ namespace TNTWebApp.Controllers
                 return  new HttpNotFoundResult();
             }
 
-            var course =  _context.Courses.SingleOrDefault(m => m.Id == id);
+            var course =  _context.Courses.SingleOrDefault(m => m.CourseId == id);
             if (course == null)
             {
                 return  new HttpNotFoundResult();
@@ -120,7 +120,7 @@ namespace TNTWebApp.Controllers
                 return  new HttpNotFoundResult();
             }
 
-            var course =   _context.Courses.SingleOrDefault(m => m.Id == id);
+            var course =   _context.Courses.SingleOrDefault(m => m.CourseId == id);
             if (course == null)
             {
                 return  new HttpNotFoundResult();
@@ -134,9 +134,9 @@ namespace TNTWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, [Bind(Include ="Id,Subject,TeacherId")] Course course)
+        public async Task<ActionResult> Edit(int id, [Bind(Include ="CourseId,Subject,TeacherId")] Course course)
         {
-            if (id != course.Id)
+            if (id != course.CourseId)
             {
                 return  new HttpNotFoundResult();
             }
@@ -150,7 +150,7 @@ namespace TNTWebApp.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CourseExists(course.Id))
+                    if (!CourseExists(course.CourseId))
                     {
                         return  new HttpNotFoundResult();
                     }
@@ -173,7 +173,7 @@ namespace TNTWebApp.Controllers
                 return  new HttpNotFoundResult();
             }
 
-            var course =  _context.Courses.SingleOrDefault(m => m.Id == id);
+            var course =  _context.Courses.SingleOrDefault(m => m.CourseId == id);
             if (course == null)
             {
                 return  new HttpNotFoundResult();
@@ -187,7 +187,7 @@ namespace TNTWebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            var course = _context.Courses.SingleOrDefault(m => m.Id == id);
+            var course = _context.Courses.SingleOrDefault(m => m.CourseId == id);
             _context.Courses.Remove(course);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -195,13 +195,13 @@ namespace TNTWebApp.Controllers
 
         private bool CourseExists(int id)
         {
-            return _context.Courses.Any(e => e.Id == id);
+            return _context.Courses.Any(e => e.CourseId == id);
         }
 
         public async Task<ActionResult> Join(int id)
         {
             var user = _context.Users.Find(User.Identity.GetUserId());
-            if (!user.Courses.Any(x=>x.Id == id))
+            if (!user.Courses.Any(x=>x.CourseId == id))
             {
                 user.Courses.Add(_context.Courses.Find(id));
                 _context.SaveChanges();

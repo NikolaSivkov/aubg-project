@@ -38,11 +38,11 @@
                 @Html.DisplayFor(modelItem => item.Students.Count)
             </td>
             <td>
-                @Html.ActionLink("Join", "join", new { id = item.Id }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Join", "join", new { id = item.CourseId }, new { @class = "btn btn-success" })
                 @if ((string)ViewData["userId"] == item.Teacher.Id)
     {
-            @:| @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-active" })
-            @:| @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn" }) 
+            @:| @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }, new { @class = "btn btn-active" })
+            @:| @Html.ActionLink("Delete", "Delete", new { id = item.CourseId }, new { @class = "btn" }) 
 }
 
             </td>

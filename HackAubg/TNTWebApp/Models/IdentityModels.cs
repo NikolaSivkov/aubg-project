@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace TNTWebApp.Models
 {
@@ -49,6 +50,22 @@ namespace TNTWebApp.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+            modelBuilder.Entity<Course>()
+                .HasMany(s => s.Students)
+                .WithMany(c => c.Courses)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("Courseid");
+                    cs.MapRightKey("UserId");
+                    cs.ToTable("UserCourse");
+                });
         }
     }
 }
