@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Index";
 }
- 
 <p>
     @Html.ActionLink("Create New Course", "Create", null, new { @class = "btn btn-active btn-large" })
  
@@ -40,10 +39,10 @@
             <td>
                 @Html.ActionLink("Join", "join", new { id = item.CourseId }, new { @class = "btn btn-success" })
                 @if ((string)ViewData["userId"] == item.Teacher.Id)
-    {
+                {
             @:| @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }, new { @class = "btn btn-active" })
             @:| @Html.ActionLink("Delete", "Delete", new { id = item.CourseId }, new { @class = "btn" }) 
-}
+                }
 
             </td>
         </tr>
