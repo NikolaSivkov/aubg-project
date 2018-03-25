@@ -37,10 +37,16 @@
 }
 
 header {
-    background: url(../images/header-back.png) no-repeat center center fixed;
+    background: url(images/header-back.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 400px;
     width: 100%;
+    padding: 0;
+}
+
+.overlay {
+    background: rgba(38, 57, 88, 0.89);
+    padding: 0;
 }
 
     header p {
@@ -280,9 +286,19 @@ main article h3 span {
         text-transform: none;
     }
 
-
-
-
 .navbar-inverse .navbar-nav > li > a:hover #main-page-button a:first-child {
     color: #008DDF;
+}
+
+.navbar-inverse {
+    background-color: white !important;
+    border: none !important;
+}
+
+    /*.navbar-inverse .navbar-nav > li > a:first-child {
+        color: #428BCA !important;
+    }*/
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #428BCA !important;
 }
