@@ -204,9 +204,15 @@ a.powered-by-firepad {
 
 main article {
     width: 50%;
-    margin: 99px auto;
+    margin: 0 auto;
     text-align: center;
+    font-weight: bold;
 }
+
+    main article h1 span {
+        font-weight: bold;
+        color: #394B61;
+    }
 
     main article img {
         border-radius: 50%;
@@ -216,7 +222,7 @@ main article {
     }
 
 .fa-users {
-    color: #008ddf;
+    color: #394B61;
     font-size: 54px;
     padding-top: 37px;
 }
@@ -231,6 +237,12 @@ main article h3 span {
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+h3 {
+    font-size: 20px !important;
 }
 
     .team article {
@@ -324,7 +336,8 @@ main article h3 span {
     }
 
 .navbar-inverse .navbar-nav > li > a:hover #main-page-button a:first-child {
-    color: #008DDF;
+    color: #394B61
+    ;
 }
 
 .navbar-inverse {
@@ -336,9 +349,9 @@ main article h3 span {
         color: #428BCA !important;
     }*/
 
-.navbar-inverse .navbar-nav > li > a:hover {
-    color: #428BCA !important;
-}
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #394B61 !important;
+    }
 
 body header, .container body-content {
     height: auto !important;
