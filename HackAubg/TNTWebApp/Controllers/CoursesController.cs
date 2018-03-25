@@ -202,8 +202,7 @@ namespace TNTWebApp.Controllers
         {
             var user = _context.Users.Find(User.Identity.GetUserId());
             user.Courses.Add(_context.Courses.Find(id));
-
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return RedirectToAction("Index", "codesession", new { id });
         }
 
