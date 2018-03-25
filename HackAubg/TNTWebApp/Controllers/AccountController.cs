@@ -67,6 +67,7 @@ namespace TNTWebApp.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
+        
 
         //
         // POST: /Account/Login
@@ -96,6 +97,16 @@ namespace TNTWebApp.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+        }
+
+        //Logout
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
         }
 
         //
@@ -326,15 +337,7 @@ namespace TNTWebApp.Controllers
 
  
         
-        //
-        // POST: /Account/LogOff
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult LogOff()
-        {
-            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
-        }
+      
 
         //
         // GET: /Account/ExternalLoginFailure
