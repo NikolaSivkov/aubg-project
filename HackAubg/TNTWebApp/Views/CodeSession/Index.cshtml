@@ -101,7 +101,7 @@
                 // the id/element dom element that will hold "our" video
                 localVideoEl: 'localVideo',
                 // the id/element dom element that will hold remote videos
-                remoteVideosEl: 'remotesVideos',
+                remoteVideosEl: 'remoteVideos',
                 // immediately ask for camera access
                 autoRequestMedia: true
             });
@@ -124,7 +124,7 @@
         <button id="joinConversation" onclick="joinConversation()" class="btn btn-primary">Join Conversation</button>
         <div id="conversation" class="hidden">
             <video id="localVideo"></video>
-            <div id="remotesVideos"></div> 
+            <div id="remoteVideos"></div> 
         </div>
     </div>
     <div id="firepad" class="col-lg-10 col-md-9 col-sm-9"></div>
