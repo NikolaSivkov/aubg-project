@@ -105,6 +105,7 @@ namespace TNTWebApp.Controllers
                 var user = _context.Users.Find(userId);
                 user.Courses.Add(course);
                 _context.Entry(user).State = System.Data.Entity.EntityState.Modified;
+                _context.Courses.Add(course);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
