@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HackAu.Models;
+using TNTWebApp.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HackAu.Controllers
+namespace TNTWebApp.Controllers
 {
     public class CodeSessionController : Controller
     {

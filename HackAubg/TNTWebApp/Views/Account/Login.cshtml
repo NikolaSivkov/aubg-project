@@ -1,0 +1,57 @@
+﻿@using System.Collections.Generic
+@using System.Linq 
+@model TNTWebApp.Models.LoginViewModel 
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+@*<h2>@ViewData["Title"]</h2>*@
+
+<main id="form-template">
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+        @Html.AntiForgeryToken()
+        <h4>Use a local account to log in.</h4>
+        <hr />
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Email)
+            @Html.EditorFor(x => x.Email)
+            @Html.ValidationMessageFor(x => x.Email)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Password)
+            @Html.EditorFor(x => x.Password)
+            @Html.ValidationMessageFor(x => x.Password)
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                @Html.LabelFor(x => x.RememberMe)
+                @Html.EditorFor(x => x.RememberMe)
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">Log in</button>
+        </div>
+        <div class="form-group">
+
+            <p>
+                @Html.ActionLink("Register as a new user?", "Register", "Account", new { returnUrl = @ViewData["ReturnUrl"] })
+
+            </p>
+        </div>
+            }
+        </section>
+    </div>
+ 
+</div>
+
+</main>
+
+@section Scripts {
+        @Html.Partial("_ValidationScriptsPartial")
+    }

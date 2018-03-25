@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using HackAu.Data;
-using HackAu.Models;
-using HackAu.Services;
+using TNTWebApp.Data;
+using TNTWebApp.Models;
+using TNTWebApp.Services;
 
-namespace HackAu
+namespace TNTWebApp
 {
     public class Startup
     {

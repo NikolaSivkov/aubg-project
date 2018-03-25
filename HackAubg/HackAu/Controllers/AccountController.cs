@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using HackAu.Models;
-using HackAu.Models.AccountViewModels;
-using HackAu.Services;
+using TNTWebApp.Models;
+using TNTWebApp.Models.AccountViewModels;
+using TNTWebApp.Services;
 
-namespace HackAu.Controllers
+namespace TNTWebApp.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]

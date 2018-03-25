@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TNTWebApp.Models.Course>
+
+@{
+    ViewData["Title"] = "Index";
+}
+ 
+<p>
+    @Html.ActionLink("Create New Course", "Create", null, new { @class = "btn btn-active btn-large" })
+ 
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Teacher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students)  
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Teacher.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Students.Count)
+            </td>
+            <td>
+                @Html.ActionLink("Join", "join", new { id = item.Id }, new { @class = "btn btn-success" })
+                @if ((string)ViewData["userId"] == item.TeacherId)
+    {
+            @:| @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-active" })
+            @:| @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn" }) 
+}
+
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

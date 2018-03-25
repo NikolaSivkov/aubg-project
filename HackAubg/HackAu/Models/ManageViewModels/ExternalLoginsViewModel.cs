@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace HackAu.Models.ManageViewModels
+namespace TNTWebApp.Models.ManageViewModels
 {
     public class ExternalLoginsViewModel
     {

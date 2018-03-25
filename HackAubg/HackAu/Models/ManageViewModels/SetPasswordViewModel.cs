@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HackAu.Models.ManageViewModels
+namespace TNTWebApp.Models.ManageViewModels
 {
     public class SetPasswordViewModel
     {

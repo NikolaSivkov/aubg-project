@@ -1,0 +1,36 @@
+﻿@model TNTWebApp.Models.Course
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Create Course</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Create"))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.LabelFor(x => x.Subject)
+                @Html.EditorFor(x => x.Subject)
+                @Html.ValidationMessageFor(x => x.Subject)
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+
+        }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{Html.RenderPartial("_ValidationScriptsPartial");}
+}

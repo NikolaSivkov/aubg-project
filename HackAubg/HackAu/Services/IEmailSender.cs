@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HackAu.Services
+namespace TNTWebApp.Services
 {
     public interface IEmailSender
     {

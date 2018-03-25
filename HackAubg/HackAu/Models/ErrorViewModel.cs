@@ -1,6 +1,6 @@
 using System;
 
-namespace HackAu.Models
+namespace TNTWebApp.Models
 {
     public class ErrorViewModel
     {

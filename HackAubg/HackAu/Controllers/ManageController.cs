@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using HackAu.Models;
-using HackAu.Models.ManageViewModels;
-using HackAu.Services;
+using TNTWebApp.Models;
+using TNTWebApp.Models.ManageViewModels;
+using TNTWebApp.Services;
 
-namespace HackAu.Controllers
+namespace TNTWebApp.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]
@@ -522,7 +522,7 @@ namespace HackAu.Controllers
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("HackAu"),
+                _urlEncoder.Encode("TNTWebApp"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

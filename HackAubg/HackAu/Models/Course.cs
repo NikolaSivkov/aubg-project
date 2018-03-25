@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HackAu.Models
+namespace TNTWebApp.Models
 {
     public class Course
     {
@@ -11,6 +11,6 @@ namespace HackAu.Models
         public string Subject { get; set; }
         public string TeacherId { get; set; }
         public ApplicationUser Teacher { get; set; }
-        public ICollection<ApplicationUser> Students => new List<ApplicationUser>();
+        public ICollection<UserCourse> Students => new List<UserCourse>();
     }
 }

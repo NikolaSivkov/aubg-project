@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HackAu.Models.AccountViewModels
+namespace TNTWebApp.Models.AccountViewModels
 {
     public class LoginViewModel
     {

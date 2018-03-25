@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using HackAu.Data;
-using HackAu.Models;
+using TNTWebApp.Data;
+using TNTWebApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
-namespace HackAu.Controllers
+namespace TNTWebApp.Controllers
 {
     [Authorize]
     public class CourseController : Controller
@@ -28,6 +28,8 @@ namespace HackAu.Controllers
         // GET: Course
         public async Task<IActionResult> Index()
         {
+            ViewData["userId"] = _userManager.GetUserId(User);
+
             var applicationDbContext = _context.Courses.Include(c => c.Teacher);
             return View(await applicationDbContext.ToListAsync());
         }
@@ -179,5 +181,17 @@ namespace HackAu.Controllers
         {
             return _context.Courses.Any(e => e.Id == id);
         }
+
+        public async Task<IActionResult> Join(int id)
+        {
+            var course = _context.Courses.Find(id);
+            var userId =   _userManager.GetUserId(User);
+            var user = _context.Users.Find(userId);
+
+            _context.Entry(new UserCourse { StudentId = user.Id,CourseId = course.Id }).State = EntityState.Added; 
+            _context.SaveChanges();
+            return RedirectToAction("Index", "codesession", new { id = course.Id });
+        }
+
     }
 }

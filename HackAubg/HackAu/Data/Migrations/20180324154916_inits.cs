@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace HackAu.Data.Migrations
+namespace TNTWebApp.Data.Migrations
 {
     public partial class inits : Migration
     {

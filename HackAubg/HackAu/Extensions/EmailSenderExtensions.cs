@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using HackAu.Services;
+using TNTWebApp.Services;
 
-namespace HackAu.Services
+namespace TNTWebApp.Services
 {
     public static class EmailSenderExtensions
     {

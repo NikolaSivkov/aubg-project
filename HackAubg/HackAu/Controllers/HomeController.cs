@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using HackAu.Models;
+using TNTWebApp.Models;
 
-namespace HackAu.Controllers
+namespace TNTWebApp.Controllers
 {
     public class HomeController : Controller
     {
