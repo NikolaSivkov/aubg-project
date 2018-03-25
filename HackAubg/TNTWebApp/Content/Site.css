@@ -129,7 +129,7 @@ footer {
     border-top: 1px solid rgba(0,0,0,.05);
     text-align: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
 }
 
     footer:hover {
@@ -281,6 +281,8 @@ h3 {
         padding-right: 21px;
         margin-top: 20px;
         color: white;
+        outline: none;
+        margin-right: -36px;
     }
 
 #Email-error, #Password-error, #ConfirmPassword-error, .text-danger, .text-danger li {
@@ -382,4 +384,25 @@ body header, .container body-content {
     font-size: 16px !important;
     padding-right: -34px;
     margin-left: 60px;
+}
+
+.col-md-4 {
+    width: 42.333333% !important;
+}
+
+.form-horizontal .control-label{
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 300;
+    width: 17%;
+}
+
+.col-md-offset-2 {
+    margin-left: 16.66666667% !important;
+}
+
+.col-md-10 {
+    width: 94.333333%;
 }
