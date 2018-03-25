@@ -37,7 +37,7 @@
 }
 
 header {
-    background: url(../content/images/header-back.png) no-repeat center center fixed;
+    background: url(../images/header-back.png) no-repeat center center fixed;
     background-size: cover;
     height: 400px;
     width: 100%;
@@ -51,6 +51,8 @@ header {
     .container {
         width: 100%;
         padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -125,11 +127,7 @@ a.powered-by-firepad {
     font-weight: bold;
 }
 
-    #main-page-button a {
-        color: white;
-        text-decoration: none;
-        outline: none;
-    }
+
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     background: white !important;
@@ -204,7 +202,7 @@ main article h3 span {
 }
 
 #form-template {
-    background: url(../content/images/registration-background.jpg) no-repeat center center fixed;
+    background: url(../images/registration-background.jpg) no-repeat center center fixed;
     background-size: cover;
     padding: 220px;
 }
@@ -213,7 +211,7 @@ main article h3 span {
         color: white;
         font-size: 21px;
         background: gray;
-        background: url(../content/images/form-back.png) no-repeat center center fixed;
+        background: url(../images/form-back.png) no-repeat center center fixed;
         padding: 38px;
     }
 
@@ -273,7 +271,7 @@ main article h3 span {
 .logo {
     float: left;
     padding-top: 5px;
-    height: 50px;
+    height: 43px;
     text-decoration: none;
 }
 
@@ -282,3 +280,9 @@ main article h3 span {
         text-transform: none;
     }
 
+
+
+
+.navbar-inverse .navbar-nav > li > a:hover #main-page-button a:first-child {
+    color: #008DDF;
+}
