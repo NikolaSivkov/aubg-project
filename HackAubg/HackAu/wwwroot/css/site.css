@@ -187,8 +187,6 @@ main article h3 span {
 }
 
 .team {
-    display: flex;
-    flex-direction: row;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -284,3 +282,6 @@ main article h3 span {
         text-transform: none;
     }
 
+    .team {
+        background: url(../../../../../) no-repeat center center fixed;
+    }

@@ -133,7 +133,7 @@ footer {
 }
 
     footer:hover {
-        color: #008DDF;
+        color: #394B61;
         cursor: pointer;
     }
 
@@ -217,8 +217,9 @@ main article {
     main article img {
         border-radius: 50%;
         max-width: 400px;
-        min-height: 400px;
+        min-height: 336px;
         margin: 23px;
+        padding-right: 50px;
     }
 
 .fa-users {
@@ -232,13 +233,15 @@ main article h3 span {
 }
 
 .team {
-    display: flex;
+    margin-top: 50px;
     flex-direction: row;
-    width: 100%;
     text-align: center;
-    margin: 0 auto;
-    padding-left: 60px;
-    padding-right: 60px;
+    display: inline-block;
+}
+
+.team article {
+    display: inline-block;
+
 }
 
 h3 {
@@ -246,8 +249,7 @@ h3 {
 }
 
     .team article {
-        width: 29%;
-        margin: 40px;
+        width: 18%;
         text-align: center;
     }
 
@@ -364,4 +366,20 @@ body header, .container body-content {
     width: 100% !important;
     padding: 0 !important;
     text-align: center;
+}
+
+.team {
+    width: 100% !important;
+    padding: 0;
+    background: url(../Content/images/man-working-on-laptop-in-office.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.team article h3 {
+    color: white;
+    vertical-align: top;
+    padding-top: 40px;
+    font-size: 16px !important;
+    padding-right: -34px;
+    margin-left: 60px;
 }
