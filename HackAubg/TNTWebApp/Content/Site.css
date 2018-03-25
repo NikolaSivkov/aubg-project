@@ -437,3 +437,24 @@ input {
         height: 52px;
         width: 20%;
     }
+
+#spec-button { 
+    background: transparent; 
+    border: 3px solid white; 
+    border-radius: 15px; 
+    color: white; 
+    font-size: 22px; 
+    height: 52px; 
+    width: 20%; 
+} 
+ 
+#back-to-courses-btn { 
+    color: white; 
+    text-decoration: none; 
+    font-size: 17px; 
+    cursor: pointer; 
+} 
+ 
+#spec-btn { 
+    margin-bottom: 60px; 
+}

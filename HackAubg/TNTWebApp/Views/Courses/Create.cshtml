@@ -19,22 +19,25 @@
                     @Html.EditorFor(x => x.Subject)
                     @Html.ValidationMessageFor(x => x.Subject)
                 </div>
-
-
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Create" class="btn btn-default" id="spec-button" />
                 </div>
-
             }
         </div>
     </div>
 
-    <div>
-        <a asp-action="Index">Back to List</a>
+   
+    <div> 
+        <a asp-action="Index">Back to List</a> 
+        <div id="spec-btn"> 
+            <a asp-action="Index" id="back-to-courses-btn">Back to List</a> 
+        </div> 
     </div>
+
+
+    @section Scripts {
+    @{
+        Html.RenderPartial("_ValidationScriptsPartial");
+
+    }
 </div>
-
-
-@section Scripts {
-    @{Html.RenderPartial("_ValidationScriptsPartial");}
-}
