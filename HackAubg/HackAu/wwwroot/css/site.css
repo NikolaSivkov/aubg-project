@@ -280,9 +280,3 @@ main article h3 span {
         text-transform: none;
     }
 
-
-
-
-.navbar-inverse .navbar-nav > li > a:hover #main-page-button a:first-child {
-    color: #008DDF;
-}
