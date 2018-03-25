@@ -201,8 +201,12 @@ namespace TNTWebApp.Controllers
         public async Task<ActionResult> Join(int id)
         {
             var user = _context.Users.Find(User.Identity.GetUserId());
-            user.Courses.Add(_context.Courses.Find(id));
-            await _context.SaveChangesAsync();
+            if (!user.Courses.Any(x=>x.Id == id))
+            {
+                user.Courses.Add(_context.Courses.Find(id));
+                _context.SaveChanges();
+            }
+          
             return RedirectToAction("Index", "codesession", new { id });
         }
 
