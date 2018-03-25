@@ -393,6 +393,10 @@ input {
     height: auto;
     color: white;
 }
+    #table-section table {
+        color: white;
+        text-align: left;
+    }
 
 
 #create-course {
