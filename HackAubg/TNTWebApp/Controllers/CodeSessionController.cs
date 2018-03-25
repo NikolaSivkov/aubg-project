@@ -10,13 +10,7 @@ namespace TNTWebApp.Controllers
 {
     public class CodeSessionController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-          
-        public CodeSessionController(UserManager<ApplicationUser> userManager)
-        {
-            this._userManager = userManager;
-        }
-       
+        
         public async Task<ActionResult> Index()
         {
             if (User.Identity.IsAuthenticated)
