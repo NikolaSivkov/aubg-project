@@ -33,8 +33,11 @@
 
 
     <script>
+        var sessionId = "@ViewData["sessionId"]";
+
         function init() {
 
+           
             var userId = Math.floor(Math.random() * 9999999999).toString();
             var displayName;
             @if (User.Identity.IsAuthenticated) {
@@ -109,7 +112,7 @@
             // we have to wait until it's ready
             webrtc.on('readyToCall', function () {
                 // you can name it anything
-                webrtc.joinRoom('room1');
+                webrtc.joinRoom(sessionId);
             });
         }
 

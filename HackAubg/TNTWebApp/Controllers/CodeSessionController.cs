@@ -11,13 +11,13 @@ namespace TNTWebApp.Controllers
     public class CodeSessionController : Controller
     {
         
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int id=0)
         {
             if (User.Identity.IsAuthenticated)
             {
                 ViewData["userid"] = User.Identity.GetUserId();
             }
-
+            ViewData["sessionId"] = id;
             return  View();
         }
     }
