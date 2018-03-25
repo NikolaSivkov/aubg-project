@@ -37,7 +37,7 @@
 }
 
 header {
-    background: url(images/header-back.jpg) no-repeat center center fixed;
+    background: url(/content/images/header-back.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 400px;
     width: 100%;
@@ -257,7 +257,7 @@ h3 {
 }
 
 #form-template {
-    background: url(../images/registration-background.jpg) no-repeat center center fixed;
+    background: url(../content/images/registration-background.jpg) no-repeat center center fixed;
     background-size: cover;
     padding: 220px;
 }
@@ -266,7 +266,7 @@ h3 {
         color: white;
         font-size: 21px;
         background: gray;
-        background: url(../images/form-back.png) no-repeat center center fixed;
+        background: url(../content/images/form-back.png) no-repeat center center fixed;
         padding: 38px;
     }
 
