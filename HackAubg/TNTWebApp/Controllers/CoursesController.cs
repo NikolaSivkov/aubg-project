@@ -100,9 +100,9 @@ namespace TNTWebApp.Controllers
 
                 var userId = User.Identity.GetUserId(); ;
 
-                course.TeacherId = userId;
-
                 var user = _context.Users.Find(userId);
+              
+                course.Teacher = user;
                 user.Courses.Add(course);
                 _context.Entry(user).State = System.Data.Entity.EntityState.Modified;
                 _context.Courses.Add(course);

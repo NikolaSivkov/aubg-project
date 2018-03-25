@@ -39,7 +39,7 @@
             </td>
             <td>
                 @Html.ActionLink("Join", "join", new { id = item.Id }, new { @class = "btn btn-success" })
-                @if ((string)ViewData["userId"] == item.TeacherId)
+                @if ((string)ViewData["userId"] == item.Teacher.Id)
     {
             @:| @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-active" })
             @:| @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn" }) 
