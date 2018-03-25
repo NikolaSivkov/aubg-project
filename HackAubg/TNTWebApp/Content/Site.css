@@ -53,6 +53,17 @@ header {
         font-size: 16px;
     }
 
+.home-sec  {
+    text-transform: uppercase;
+    color: white;
+}
+
+body header, .container body-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 @media (min-width: 1200px) {
     .container {
         width: 100%;
